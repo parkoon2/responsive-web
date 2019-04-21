@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            width: 100%;
+            height: 70px;
+            background-color: #111;
+        }
+
+        .section1 {
+            background-color: #222;
+            width: 100%;
+            height: 200px;
+        }
+
+        .aside {
+            background-color: #333;
+            width: 33.333%;
+            height: 400px;
+            float: left;
+        }
+
+        .article1 {
+            background-color: #444;
+            width: 66.6666%;
+            height: 200px;
+            float: left;
+        }
+
+        .arcitle2 {
+            background-color: #555;
+            width: 66.6666%;
+            height: 200px;
+            float: left;
+        }
+
+        .arcitle3 {
+            background-color: #666;
+            width: 33.3333%;
+            height: 200px;
+            float: left;
+        }
+
+        .arcitle4 {
+            background-color: #777;
+            width: 33.3333%;
+            height: 200px;
+            float: left;
+        }
+
+        .arcitle5 {
+            background-color: #888;
+            width: 33.3333%;
+            height: 200px;
+            float: left;
+
+        }
+
+        .section2 {
+            background-color: #999;
+            /* height: 400px; */
+            /* width: 94%; */
+            /* height: auto; */
+            /* width: 100%; */
+            width: auto;
+            clear: both;
+            overflow: hidden;
+            padding: 2%;
+        }
+
+        .section2>div {
+            background-color: tomato;
+            height: 200px;
+            width: 23%;
+            /* height: 70%; */
+            /* width: 21%; */
+            float: left;
+            margin: 1%;
+            border-radius: 10px;
+        }
+
+        .footer {
+            background-color: #000;
+            width: 100%;
+            height: 70px;
+            clear: both;
+
+        }
+
+        /* 0 ~ 1240px */
+        @media (max-width: 1240px) {
+            #wrap {
+                width: 100%;
+            }
+
+            .arcitle3 {
+                width: 50%;
+            }
+
+            .arcitle4 {
+                width: 50%;
+            }
+
+            .arcitle5 {
+                display: none;
+            }
+
+            .section2 {
+                display: flex;
+                justify-content: center;
+            }
+
+            .section2>div {
+                width: 33.3333%;
+            }
+
+            .section2>div:nth-child(3) {
+                display: none;
+            }
+        }
+
+        /* 0 ~ 1024px */
+        @media (max-width: 1024px) {
+            .arcitle3 {
+                width: 100%;
+                float: none;
+                clear: both;
+            }
+
+            .arcitle4 {
+                width: 100%;
+                float: none;
+                clear: both;
+            }
+        }
+
+        /* 0 ~ 760px */
+        @media (max-width: 760px) {
+            .aside {
+                width: 100%;
+                float: none;
+                clear: both;
+            }
+
+            .article1 {
+                width: 100%;
+                float: none;
+                clear: both;
+            }
+
+
+            .arcitle2 {
+                width: 100%;
+                float: none;
+                clear: both;
+            }
+
+            .section2 {
+                flex-direction: column;
+            }
+
+            .section2>div {
+                width: 95%;
+                float: none;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="wrap">
+        <div class="header"></div>
+        <div class="section1"></div>
+        <div class="aside"></div>
+        <div class="article1"></div>
+        <div class="arcitle2"></div>
+        <div class="arcitle3"></div>
+        <div class="arcitle4"></div>
+        <div class="arcitle5"></div>
+        <div class="section2">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+
+</html>
