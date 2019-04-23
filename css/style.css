@@ -336,6 +336,96 @@ body {
     font-size: 10px;
 }
 
+
+/* 이미지 슬라이드 */
+.slider figure {position: relative;}
+.slider figcaption {
+    position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 18px;
+}
+.slider figcaption em {
+    display: block; font-weight: bold; font-size: 28px;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all .84s ease;
+    transform: translateX(50px);
+}
+
+.slider figcaption span {
+    display: block;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    opacity: 0;
+    transition: all .84s 0.2s ease;
+    transform: translateX(200px);
+}
+
+.slider .slick-active figcaption em {
+    opacity: 1;
+    transform: translateX(0);
+
+
+}
+.slider .slick-active figcaption span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slider .slick-dots {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.slider .slick-dots li {
+    display: inline-block;
+    width: 15px; height: 15px; margin: 5px;
+}
+
+.slider .slick-dots li button {
+    font-size: 0; line-height: 0;
+    display: block; width: 15px; height: 15px;
+    cursor: pointer;
+    background-color: #5dbfeb;
+    border-radius: 50%;
+}
+
+.slider .slick-dots li.slick-active button {background-color: #2b91c8}
+
+.slider .slick-prev {
+    position: absolute; left: 0; top: 50%; z-index: 1000;
+    transform: translateY(-50%);
+    width: 30px; height: 30px;
+    display: inline-block;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+.slider .slick-prev::before {
+    content: "<";
+    color: #5dbfeb;
+    text-indent: 0;
+    position: absolute; left: 10px; top: 5px;
+}
+
+.slider .slick-next {
+    position: absolute; right: 0; top: 50%; z-index: 1000;
+    transform: translateY(-50%);
+    width: 30px; height: 30px;
+    display: inline-block;
+    text-indent: -9999px;
+    cursor: pointer;
+
+}
+
+.slider .slick-next::before {
+    content: ">";
+    color: #5dbfeb;
+    text-indent: 0;
+    position: absolute; left: 10px; top: 5px;
+}
+
 /* 미디어 쿼리 */
 /* 화면너비 0 ~ 1220px */
 @media (max-width: 1220px) {
@@ -454,6 +544,9 @@ body {
     .column.col2 { background: #fff}
     /* .column.col4 { background: #fff} */
     
+    .slider figcaption { padding: 10px;}
+    .slider figcaption em { font-size: 18px}
+    .slider figcaption span{font-size: 14px}
 }
 
 /* 화면너비 0 ~ 480px */

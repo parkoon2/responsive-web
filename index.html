@@ -28,6 +28,7 @@
     <!-- style -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slick.css">
 
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="icon/favicon.ico">
@@ -203,9 +204,29 @@
             <section id="cont_center">
                 <h3 class="ir_su">반응형 사이트 가운데 컨텐츠</h3>
                 <article class="column col4">
-                    <h4 class="col_title">Title</h4>
-                    <p class="col_desc">이 곳은 설명 부분입니다.</p>
-                    <!--  -->
+                    <h4 class="col_title">Slick Slider</h4>
+                    <p class="col_desc">slick.js 를 이용한 이미지 슬라이드 효과입니다.</p>
+                    <!-- 이미지 슬라이드 -->
+                    <div class="slider">
+                        <div>
+                            <figure>
+                                <img src="img/slider01.jpg" alt="이미지1">
+                                <figcaption><em>Responsive Sitre</em><span>슬라이드 플러그인을 이용한...</span></figcaption>
+                            </figure>
+                        </div>
+                        <div>
+                            <figure>
+                                <img src="img/slider02.jpg" alt="이미지2">
+                                <figcaption><em>Responsive Sitre</em><span>슬라이드 플러그인을 이용한...</span></figcaption>
+                            </figure>
+                        </div>
+                        <div>
+                            <figure>
+                                <img src="img/slider03.jpg" alt="이미지3">
+                                <figcaption><em>Responsive Sitre</em><span>슬라이드 플러그인을 이용한...</span></figcaption>
+                            </figure>
+                        </div>
+                    </div>
 
                     <!-- // -->
                 </article>
@@ -252,7 +273,7 @@
     </section>
     <!-- Contents -->
 </main>
-
+<i class="fas fa-arrow-left"></i>
 <footer id="footer">
     <div class="container">
         <h2>반응형 사이트 푸터</h2>
@@ -264,6 +285,25 @@
     <!-- JavaScript Libraries -->
     <script src="js/jquery.min_1.12.4.js"></script>
     <script src="js/modernizr-custom.js"></script>
+    <script src="js/slick.min.js"></script>
+
+    <script>
+        $(`.slider`).slick({
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: true,
+                        dots: false
+                    }
+                }
+            ]
+        })
+    </script>
 </body>
 
 </html>
