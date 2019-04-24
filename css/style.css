@@ -425,6 +425,42 @@ body {
     text-indent: 0;
     position: absolute; left: 10px; top: 5px;
 }
+.square {
+    overflow: hidden;
+}
+.square a {
+    position: relative;
+    float: left; width: 19%; margin: 0.5%;
+}
+.square a img {
+    width: 100%; display: block;
+}
+.square a em {
+    position: absolute; left: 0; bottom: -30px;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.77);
+    color: #fff;
+    opacity: 1;
+    transition: all .3s ease;
+}
+
+.square a:hover em {
+    bottom: 0px;
+    background: rgba(0,0,0,0.57);
+
+}
+
+.square a:nth-child(1):hover img { filter: blur(2px); }
+.square a:nth-child(2):hover img { filter: brightness(50%) }
+.square a:nth-child(3):hover img { filter: contrast(10%) }
+.square a:nth-child(4):hover img { filter: grayscale(100%) }
+.square a:nth-child(5):hover img { filter: hue-rotate(120deg) }
+.square a:nth-child(6):hover img { filter: invert(100%)  }
+.square a:nth-child(7):hover img { filter: opacity(10%) }
+.square a:nth-child(8):hover img { filter: saturate(10%) }
+.square a:nth-child(9):hover img { filter: sepia(120%) }
+.square a:nth-child(10):hover img { filter: sepia(120%) hue-rotate(120deg) }
 
 /* 미디어 쿼리 */
 /* 화면너비 0 ~ 1220px */
@@ -446,10 +482,21 @@ body {
     }
 
     #contents .container { border: 0}
+    .square a {
+        width: 24%; 
+    }
+    .square a:nth-child(5n) {
+        display: none;
+    }
 }
 /* 화면너비 0~ 1024px */
 @media (max-width: 1024px) {
-
+    .square a {
+        width: 32.3333%; 
+    }
+    .square a:nth-child(4n) {
+        display: none;
+    }
 }
 
 /* 화면너비 0 ~ 960px */
@@ -481,6 +528,11 @@ body {
     #cont_left { float: none; width: 100%}
     #cont_center { margin-left: 0}
     .column.col3 {border-bottom: 1px solid #dbdbdb}
+    .square a {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
 
 }
 
