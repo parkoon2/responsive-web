@@ -474,6 +474,29 @@ body {
     height: 100%;
 }
 
+/* Footer */
+.footer {text-align: center; padding: 30px 50px;}
+.footer li {position: relative; display: inline; padding: 0 7px 0 10px; white-space: nowrap}
+.footer li:before {
+    content: '';
+    width: 1px;
+    height: 12px;
+    background-color: #dbdbdb;
+    position: absolute;
+    top:3px;
+    left:0
+}
+
+.footer li:first-child:before {
+    width: 0;
+}
+/* .footer li:nth-child(1)::before {
+    display: none;
+} */
+.footer address {padding-top: 15px;}
+.footer li a {}
+.footer li a strong {}
+
 
 /* 미디어 쿼리 */
 /* 화면너비 0 ~ 1220px */
@@ -534,6 +557,10 @@ body {
     .nav > div ol {
         margin-bottom: 10px;
     }
+    #cont_right {overflow:hidden}
+    #cont_right .column{float: left; width: 33.3333%; box-sizing: border-box;}
+    #cont_right .column.col7{border-right: 1px solid #dbdbdb; border-bottom: 0}
+    #cont_right .column.col8{border-right: 1px solid #dbdbdb; border-bottom: 0}
 }
 
 /* 화면너비 0 ~ 768px */
@@ -612,6 +639,10 @@ body {
     .slider figcaption { padding: 10px;}
     .slider figcaption em { font-size: 18px}
     .slider figcaption span{font-size: 14px}
+
+    #cont_right .column{width: 50%;}
+    #cont_right .column.col8{border-right: 0;}
+    #cont_right .column.col9{display: none;}
 }
 
 /* 화면너비 0 ~ 480px */
@@ -626,5 +657,6 @@ body {
 
 /* 화면너비 0 ~ 320px */
 @media (max-width: 320px) {
-
+    #cont_right .column{width: 100%;}
+    #cont_right .column.col7{border-right: 0; border-bottom: 1px solid #dbdbdb}
 }
